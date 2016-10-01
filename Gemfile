@@ -6,6 +6,8 @@ gem 'puma'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
+gem 'foundation-rails'
+gem 'font-awesome-rails'
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
@@ -13,6 +15,7 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'factory_girl_rails'
   gem 'valid_attribute'
+  gem 'httparty'
 end
 
 group :test do

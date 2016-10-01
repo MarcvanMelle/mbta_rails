@@ -32,9 +32,11 @@ ActiveRecord::Schema.define(version: 20160923125900) do
   create_table "stops", force: :cascade do |t|
     t.string   "location"
     t.string   "time"
+    t.boolean  "peak",       default: false
+    t.boolean  "flagged",    default: false
     t.integer  "train_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["train_id"], name: "index_stops_on_train_id", using: :btree
   end
 

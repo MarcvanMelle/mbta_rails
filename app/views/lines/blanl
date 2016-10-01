@@ -1,0 +1,13 @@
+This is possible Dropdown Menu JSX code
+
+<ul className="dropdown menu" data-dropdown-menu>
+  {lines}
+</ul>
+
+<li role="menuitem" className="is-dropdown-submenu-parent opens-right" aria-haspopup="true" aria-expanded="false" aria-label={this.props.name} data-is-click="false">
+  <a href="#">{this.props.name}</a>
+    <ul className="menu submenu is-dropdown-submenu first-sub vertical" aria-hidden="true" role="menu">
+      <li role="menuitem" className="is-submenu-item is-dropdown-submenu-item"><a href="#">Schedula A</a></li>
+      <li><a href="#">Schedula A</a></li>
+    </ul>
+</li>

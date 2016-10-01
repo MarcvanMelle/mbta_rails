@@ -1,0 +1,12 @@
+<% @lines.each do |line| %>
+  <h1><%= line.name %></h1>
+  <% line.schedules.each do |schedule| %>
+    <h2><%= schedule.name %></h2>
+    <% schedule.trains.each do |train| %>
+      <h3><%= train.number %></h3>
+      <% train.stops.reverse.each do |stop| %>
+        <h4><%= stop.location %>: <%= stop.time %></h4>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
