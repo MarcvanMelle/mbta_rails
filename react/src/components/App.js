@@ -92,9 +92,7 @@ class App extends Component{
           {lines}
           {schedules}
         </div>
-        <div>
-          {trains}
-        </div>
+        {trains}
       </div>
     )
   }

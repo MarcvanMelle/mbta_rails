@@ -3,7 +3,22 @@ import Stop from './Stop'
 
 const Train = props => {
 
+  let header = props.stops.map(locations =>{
+
+    let headers = locations.map(booble =>{
+      return (
+        <td>{booble.location}</td>
+      )
+    })
+
+    return(
+      <tr>{headers}</tr>
+    )
+
+  })
+
   let allStops = props.stops.map(stops => {
+
 
     let moreStops = stops.map(stop =>{
 
@@ -11,7 +26,6 @@ const Train = props => {
         <Stop
           key={stop.id}
           id={stop.id}
-          location={stop.location}
           time={stop.time}
         />
       )
@@ -19,15 +33,23 @@ const Train = props => {
     })
 
     return (
-      moreStops
+        <tr>
+          {moreStops}
+        </tr>
     )
 
   })
 
+
   return(
-    <div>
-      {allStops}
-    </div>
+    <table>
+      <thead>
+        {header}
+      </thead>
+      <tbody>
+        {allStops}
+      </tbody>
+    </table>
   )
 
 }

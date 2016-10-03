@@ -3,7 +3,7 @@ import React from 'react';
 const Stop = props => {
 
   return(
-    <div>{props.location}: {props.time}</div>
+    <td>{props.time}</td>
   )
 
 }
