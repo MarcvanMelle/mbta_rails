@@ -28,13 +28,13 @@ def web_scraper(url)
         flagged = false
 
         if time.attributes["class"]
-          if time.attributes["class"].value == "peak"
+          if time.attributes["class"].value.include?("peak")
             peak = true;
           end
         end
 
         if time.attributes["class"]
-          if time.attributes["class"].value == "flagstop"
+          if time.attributes["class"].value.include?("flagstop")
             flagged = true;
           end
         end

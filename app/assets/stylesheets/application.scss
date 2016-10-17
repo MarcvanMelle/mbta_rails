@@ -5,3 +5,43 @@
 @import "stops";
 @import "trains";
 @import "colors";
+
+$primary: #820673;
+$secondary: #A8369A;
+$tertiary: #A11490;
+
+$peak: #EEB6E7;
+$alt-peak: #FBE1F8;
+
+.flagged {
+  color: red;
+  font-weight: bold;
+}
+
+.alt .peak {
+  background-color: $alt-peak;
+}
+
+.peak {
+  background-color: $peak;
+}
+
+.cell {
+  border: .1rem solid #CDD5EA;
+}
+
+.button {
+  height: 3.5rem;
+  background-color: $primary;
+  margin-bottom: 0;
+  border: 1px solid white;
+}
+
+.button:focus {
+  background-color: $secondary;
+  outline: none;
+}
+
+.button:hover {
+  background-color: $tertiary;
+}

@@ -74,25 +74,19 @@ class App extends Component{
       )
     })
 
-    let trains = this.state.trains.map(train => {
-
-      return(
-        <Train
-          key={train.id}
-          id={train.id}
-          stops={this.state.stops}
-        />
-      )
-
-    })
-
     return(
       <div>
-        <div>
+        <div className = "row">
           {lines}
+          <hr/>
           {schedules}
         </div>
-        {trains}
+        <Train
+          key={this.state.selectedScheduleId}
+          id={this.state.selectedScheduleId}
+          stops={this.state.stops}
+          trains={this.state.trains}
+        />
       </div>
     )
   }
